@@ -1,0 +1,147 @@
+{
+  "ui": {
+    "app_name": "Fairfax County Energy & Home Repair Assistance",
+    "app_tagline": "Find programs you may qualify for in minutes",
+    "language_toggle": "Español",
+    "start_button": "Check My Eligibility",
+    "start_subtitle": "Answer a few questions to find programs that may help you.",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip this question",
+    "skip_hint": "Skipping will show you all programs regardless of this criteria.",
+    "submit": "See My Results",
+    "print": "Print Results",
+    "results_title": "Programs You May Qualify For",
+    "results_subtitle": "Based on your answers, these programs may be available to you.",
+    "no_results_title": "No Matching Programs Found",
+    "no_results_body": "Based on your answers, we could not find matching programs at this time. Please contact Fairfax County for assistance.",
+    "no_results_contact": "Call 703-222-0880 for more help",
+    "caseworker_toggle_on": "Case Worker View",
+    "caseworker_toggle_off": "Resident View",
+    "currently_open": "Currently Open",
+    "currently_closed": "Currently Closed",
+    "apply_instructions": "How to Apply",
+    "show_details": "Show Details",
+    "hide_details": "Hide Details",
+    "income_monthly": "Monthly gross income",
+    "income_annual": "Annual gross income",
+    "income_toggle_monthly": "Enter monthly income",
+    "income_toggle_annual": "Enter annual income",
+    "household_size_label": "Number of people in your household",
+    "income_note": "Income Note",
+    "program_details": "Program Details",
+    "eligibility_details": "Eligibility Details",
+    "contact_info": "Contact Information",
+    "income_limits_table": "Income Limits by Household Size",
+    "household_size_header": "Household Size",
+    "monthly_limit_header": "Monthly Limit",
+    "annual_limit_header": "Annual Limit",
+    "any_income": "No income limit",
+    "legal_status_required": "Legal status required",
+    "legal_status_not_required": "Available regardless of immigration status",
+    "admin_title": "Admin — Program Management",
+    "admin_programs": "Programs",
+    "admin_seasonal": "Seasonal Windows",
+    "admin_lookups": "Reference Data",
+    "admin_save": "Save",
+    "admin_cancel": "Cancel",
+    "admin_add_program": "Add Program",
+    "admin_edit_program": "Edit Program",
+    "admin_deactivate": "Deactivate",
+    "admin_activate": "Activate",
+    "admin_login_title": "Admin Login",
+    "admin_login_button": "Sign In",
+    "admin_logout": "Sign Out",
+    "admin_username": "Username",
+    "admin_password": "Password",
+    "admin_dashboard_title": "Dashboard",
+    "admin_import_title": "Bulk Import",
+    "start_over": "Start Over",
+    "program_count": "{count} program | {count} programs",
+    "phone": "Phone",
+    "website": "Website"
+  },
+  "progress": {
+    "label": "Question {current} of {total}",
+    "aria_label": "Step {current} of {total}"
+  },
+  "questions": {
+    "geography": {
+      "prompt": "Where do you live?",
+      "hint": "Select the jurisdiction where your home is located."
+    },
+    "household_size": {
+      "prompt": "How many people live in your household?",
+      "hint": "Include yourself and everyone who lives with you, including children."
+    },
+    "income": {
+      "prompt": "What is your household's gross income?",
+      "hint": "Enter your total household income before taxes and deductions. You can enter monthly or annual."
+    },
+    "age_group": {
+      "prompt": "Which best describes the primary applicant?",
+      "hint": "Select the category that best applies to the person who will be applying for assistance."
+    },
+    "legal_status": {
+      "prompt": "Do you have U.S. citizenship or legal immigration status?",
+      "hint": "Some programs are available regardless of immigration status. You may skip this question if you prefer not to answer."
+    },
+    "ownership_type": {
+      "prompt": "Do you rent or own your home?",
+      "hint": "Select whether you rent or own the home where you live."
+    },
+    "home_type": {
+      "prompt": "What type of home do you live in?",
+      "hint": "Select the option that best describes your home."
+    },
+    "need_type": {
+      "prompt": "What kind of help are you looking for?",
+      "hint": "Select all that apply to your situation."
+    }
+  },
+  "options": {
+    "geography": {
+      "fairfax_county": "Fairfax County (unincorporated area)",
+      "city_of_fairfax": "City of Fairfax",
+      "city_of_falls_church": "City of Falls Church",
+      "herndon": "Town of Herndon",
+      "vienna": "Town of Vienna"
+    },
+    "age_group": {
+      "age_0_5": "Child, ages 0–5",
+      "age_6_59_nondis": "Adult, ages 6–59 (no disability)",
+      "age_60_plus": "Senior, age 60 or older",
+      "federally_disabled": "Person with a federal disability designation",
+      "veteran": "Veteran"
+    },
+    "legal_status": {
+      "with_status": "Yes — U.S. citizen or have legal immigration status",
+      "without_status": "No — I do not have legal immigration status"
+    },
+    "ownership_type": {
+      "renter": "I rent my home",
+      "owner": "I own my home"
+    },
+    "home_type": {
+      "manufactured": "Manufactured or mobile home",
+      "single_family": "Single-family detached house",
+      "townhome": "Townhome or attached home",
+      "multi_family": "Apartment in a multi-family building",
+      "condo": "Condominium"
+    },
+    "need_type": {
+      "ac_cooling": "Air conditioning or cooling",
+      "heating": "Heating system or fuel assistance",
+      "home_repair_efficiency": "Home repair, weatherization, or energy efficiency"
+    }
+  },
+  "errors": {
+    "load_failed": "Could not load program data. Please refresh the page or call 703-222-0880.",
+    "required_field": "This field is required.",
+    "invalid_income": "Please enter a valid income amount.",
+    "invalid_household": "Please enter a number between 1 and 8.",
+    "min_1": "Please enter at least 1.",
+    "max_8": "Household size cannot exceed 8 people for this tool. Please call for assistance.",
+    "auth_failed": "Invalid username or password."
+  }
+}

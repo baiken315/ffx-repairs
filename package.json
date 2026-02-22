@@ -1,0 +1,19 @@
+{
+  "name": "ffx-home-repair",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "migrate": "npm run migrate --workspace=backend",
+    "seed": "npm run seed --workspace=backend",
+    "lint": "npm run lint --workspace=frontend && npm run lint --workspace=backend",
+    "set-password": "node scripts/set-password.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

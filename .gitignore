@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.local
+.DS_Store
+programs_import.json
+*.xlsx
+backend/dist/
+frontend/dist/

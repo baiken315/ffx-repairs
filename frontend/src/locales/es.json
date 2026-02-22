@@ -1,0 +1,147 @@
+{
+  "ui": {
+    "app_name": "Asistencia de Energía y Reparación del Hogar del Condado de Fairfax",
+    "app_tagline": "Encuentre programas para los que podría calificar en minutos",
+    "language_toggle": "English",
+    "start_button": "Verificar Mi Elegibilidad",
+    "start_subtitle": "Responda algunas preguntas para encontrar programas que puedan ayudarle.",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "skip": "Omitir esta pregunta",
+    "skip_hint": "Si omite esta pregunta, se mostrarán todos los programas sin importar este criterio.",
+    "submit": "Ver Mis Resultados",
+    "print": "Imprimir Resultados",
+    "results_title": "Programas Para los que Podría Calificar",
+    "results_subtitle": "Según sus respuestas, estos programas pueden estar disponibles para usted.",
+    "no_results_title": "No Se Encontraron Programas",
+    "no_results_body": "Según sus respuestas, no encontramos programas coincidentes en este momento. Por favor, contacte al Condado de Fairfax para obtener asistencia.",
+    "no_results_contact": "Llame al 703-222-0880 para más ayuda",
+    "caseworker_toggle_on": "Vista del Trabajador Social",
+    "caseworker_toggle_off": "Vista del Residente",
+    "currently_open": "Actualmente Abierto",
+    "currently_closed": "Actualmente Cerrado",
+    "apply_instructions": "Cómo Solicitar",
+    "show_details": "Mostrar Detalles",
+    "hide_details": "Ocultar Detalles",
+    "income_monthly": "Ingreso bruto mensual",
+    "income_annual": "Ingreso bruto anual",
+    "income_toggle_monthly": "Ingresar ingreso mensual",
+    "income_toggle_annual": "Ingresar ingreso anual",
+    "household_size_label": "Número de personas en su hogar",
+    "income_note": "Nota sobre ingresos",
+    "program_details": "Detalles del Programa",
+    "eligibility_details": "Detalles de Elegibilidad",
+    "contact_info": "Información de Contacto",
+    "income_limits_table": "Límites de Ingresos por Tamaño del Hogar",
+    "household_size_header": "Tamaño del Hogar",
+    "monthly_limit_header": "Límite Mensual",
+    "annual_limit_header": "Límite Anual",
+    "any_income": "Sin límite de ingresos",
+    "legal_status_required": "Se requiere estatus legal",
+    "legal_status_not_required": "Disponible independientemente del estatus migratorio",
+    "admin_title": "Administración — Gestión de Programas",
+    "admin_programs": "Programas",
+    "admin_seasonal": "Ventanas de Temporada",
+    "admin_lookups": "Datos de Referencia",
+    "admin_save": "Guardar",
+    "admin_cancel": "Cancelar",
+    "admin_add_program": "Agregar Programa",
+    "admin_edit_program": "Editar Programa",
+    "admin_deactivate": "Desactivar",
+    "admin_activate": "Activar",
+    "admin_login_title": "Inicio de Sesión de Administrador",
+    "admin_login_button": "Iniciar Sesión",
+    "admin_logout": "Cerrar Sesión",
+    "admin_username": "Usuario",
+    "admin_password": "Contraseña",
+    "admin_dashboard_title": "Panel de Control",
+    "admin_import_title": "Importación Masiva",
+    "start_over": "Empezar de Nuevo",
+    "program_count": "{count} programa | {count} programas",
+    "phone": "Teléfono",
+    "website": "Sitio Web"
+  },
+  "progress": {
+    "label": "Pregunta {current} de {total}",
+    "aria_label": "Paso {current} de {total}"
+  },
+  "questions": {
+    "geography": {
+      "prompt": "¿Dónde vive usted?",
+      "hint": "Seleccione la jurisdicción donde está ubicado su hogar."
+    },
+    "household_size": {
+      "prompt": "¿Cuántas personas viven en su hogar?",
+      "hint": "Incluya a usted mismo y a todos los que viven con usted, incluyendo niños."
+    },
+    "income": {
+      "prompt": "¿Cuál es el ingreso bruto de su hogar?",
+      "hint": "Ingrese el ingreso total del hogar antes de impuestos y deducciones. Puede ingresar el ingreso mensual o anual."
+    },
+    "age_group": {
+      "prompt": "¿Cuál describe mejor al solicitante principal?",
+      "hint": "Seleccione la categoría que mejor aplica a la persona que solicitará la asistencia."
+    },
+    "legal_status": {
+      "prompt": "¿Tiene ciudadanía estadounidense o estatus migratorio legal?",
+      "hint": "Algunos programas están disponibles independientemente del estatus migratorio. Puede omitir esta pregunta si prefiere no responder."
+    },
+    "ownership_type": {
+      "prompt": "¿Usted alquila o es propietario/a de su hogar?",
+      "hint": "Seleccione si alquila o es dueño/a del hogar donde vive."
+    },
+    "home_type": {
+      "prompt": "¿Qué tipo de vivienda tiene?",
+      "hint": "Seleccione la opción que mejor describe su hogar."
+    },
+    "need_type": {
+      "prompt": "¿Qué tipo de ayuda está buscando?",
+      "hint": "Seleccione todo lo que aplique a su situación."
+    }
+  },
+  "options": {
+    "geography": {
+      "fairfax_county": "Condado de Fairfax (área no incorporada)",
+      "city_of_fairfax": "Ciudad de Fairfax",
+      "city_of_falls_church": "Ciudad de Falls Church",
+      "herndon": "Pueblo de Herndon",
+      "vienna": "Pueblo de Vienna"
+    },
+    "age_group": {
+      "age_0_5": "Niño/a, edades 0–5",
+      "age_6_59_nondis": "Adulto/a, edades 6–59 (sin discapacidad)",
+      "age_60_plus": "Persona mayor, 60 años o más",
+      "federally_disabled": "Persona con una designación federal de discapacidad",
+      "veteran": "Veterano/a"
+    },
+    "legal_status": {
+      "with_status": "Sí — soy ciudadano/a de EE.UU. o tengo estatus migratorio legal",
+      "without_status": "No — no tengo estatus migratorio legal"
+    },
+    "ownership_type": {
+      "renter": "Soy inquilino/a",
+      "owner": "Soy propietario/a de mi vivienda"
+    },
+    "home_type": {
+      "manufactured": "Casa prefabricada o móvil",
+      "single_family": "Casa unifamiliar separada",
+      "townhome": "Casa adosada",
+      "multi_family": "Apartamento en un edificio multifamiliar",
+      "condo": "Condominio"
+    },
+    "need_type": {
+      "ac_cooling": "Aire acondicionado o enfriamiento",
+      "heating": "Sistema de calefacción o asistencia con combustible",
+      "home_repair_efficiency": "Reparación del hogar, impermeabilización o eficiencia energética"
+    }
+  },
+  "errors": {
+    "load_failed": "No se pudo cargar la información del programa. Por favor, actualice la página o llame al 703-222-0880.",
+    "required_field": "Este campo es obligatorio.",
+    "invalid_income": "Por favor, ingrese una cantidad de ingresos válida.",
+    "invalid_household": "Por favor, ingrese un número entre 1 y 8.",
+    "min_1": "Por favor, ingrese al menos 1.",
+    "max_8": "El tamaño del hogar no puede exceder 8 personas para esta herramienta. Por favor, llame para obtener asistencia.",
+    "auth_failed": "Nombre de usuario o contraseña incorrectos."
+  }
+}
