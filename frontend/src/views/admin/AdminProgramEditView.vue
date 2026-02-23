@@ -185,6 +185,20 @@
 
         <!-- Tab: Income -->
         <div v-show="activeTab === 'income'" class="card tab-panel" role="tabpanel">
+          <!-- Translate bar -->
+          <div class="translate-bar">
+            <span class="translate-bar__label">Spanish fields</span>
+            <button
+              type="button"
+              class="btn btn--outline btn--sm"
+              :disabled="translating"
+              @click="autoTranslateIncome"
+            >
+              {{ translating ? 'Translating…' : '✨ Auto-translate EN → ES' }}
+            </button>
+            <span v-if="translateError" class="translate-error">{{ translateError }}</span>
+          </div>
+
           <div class="form-group">
             <label class="form-label" for="benchmark">Income Benchmark</label>
             <select id="benchmark" v-model="form.income_benchmark_id" class="form-input">
@@ -239,9 +253,19 @@
                   <input type="text" v-model="w.notes_es" class="form-input" />
                 </div>
               </div>
-              <button type="button" class="btn btn--sm btn--ghost" @click="removeWindow(i)">
-                🗑 Remove window
-              </button>
+              <div class="seasonal-row-actions">
+                <button
+                  type="button"
+                  class="btn btn--outline btn--sm"
+                  :disabled="translating || !w.notes_en"
+                  @click="autoTranslateWindow(i)"
+                >
+                  {{ translating ? 'Translating…' : '✨ Translate notes' }}
+                </button>
+                <button type="button" class="btn btn--sm btn--ghost" @click="removeWindow(i)">
+                  🗑 Remove window
+                </button>
+              </div>
             </div>
           </div>
           <button type="button" class="btn btn--outline btn--sm" @click="addWindow" style="margin-top:var(--sp-3)">
@@ -346,6 +370,7 @@ async function autoTranslateBasic() {
     form.full_description_en,
     form.how_to_apply_en,
     form.income_note_en,
+    form.notes_en,
   ]
   const results = await translateToSpanish(originals)
   if (results[0]) form.name_es = results[0]
@@ -353,6 +378,20 @@ async function autoTranslateBasic() {
   if (results[2]) form.full_description_es = results[2]
   if (results[3]) form.how_to_apply_es = results[3]
   if (results[4]) form.income_note_es = results[4]
+  if (results[5]) form.notes_es = results[5]
+}
+
+async function autoTranslateIncome() {
+  const originals = [form.income_note_en]
+  const results = await translateToSpanish(originals)
+  if (results[0]) form.income_note_es = results[0]
+}
+
+async function autoTranslateWindow(i: number) {
+  const w = form.seasonal_windows[i]
+  const originals = [w.notes_en]
+  const results = await translateToSpanish(originals)
+  if (results[0]) w.notes_es = results[0]
 }
 
 const route = useRoute()
@@ -635,6 +674,13 @@ onMounted(async () => {
   background: var(--color-bg-muted);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
+}
+
+.seasonal-row-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
 }
 
 .admins-list { display: flex; flex-direction: column; gap: var(--sp-2); }
