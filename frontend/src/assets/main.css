@@ -119,15 +119,27 @@ h4 { font-size: var(--text-lg); font-weight: 600; }
   box-shadow: var(--shadow-md);
 }
 
+.app-header__brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.app-header__brand:hover .app-header__title { color: rgba(255,255,255,0.85); }
+
 .app-header__title {
   font-size: var(--text-base);
   font-weight: 700;
   color: white;
-  text-decoration: none;
-  line-height: 1.2;
 }
 
-.app-header__title:hover { color: rgba(255,255,255,0.85); }
+.app-header__subtitle {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
 
 .app-header__nav { display: flex; align-items: center; gap: var(--sp-2); flex: 1; margin-left: var(--sp-4); }
 .app-header__nav-link {
