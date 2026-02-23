@@ -46,6 +46,17 @@
           Monthly and annual limits should be consistent (annual ÷ 12 = monthly).
         </p>
 
+        <div v-if="!yearHasData" class="no-data-banner">
+          <span>No limits saved for {{ effectiveYear }} yet.</span>
+          <button
+            v-if="priorYearWithData"
+            class="btn btn--outline btn--sm"
+            @click="copyFromPriorYear"
+          >
+            Copy from {{ priorYearWithData }}
+          </button>
+        </div>
+
         <div class="threshold-table-wrapper">
           <table class="threshold-table">
             <thead>
@@ -124,6 +135,8 @@ const loading = ref(true)
 const saving = ref(false)
 const saveMessage = ref('')
 const saveOk = ref(false)
+const yearHasData = ref(true)
+const priorYearWithData = ref<number | null>(null)
 
 const benchmarks = ref<Benchmark[]>([])
 const allThresholds = ref<ThresholdRow[]>([])
@@ -158,30 +171,48 @@ const programsUsingBenchmark = computed(() => {
   return rows.length > 0 ? 'has thresholds defined' : 'no thresholds yet'
 })
 
-function buildEditRows(benchmarkId: number, year: number): EditRow[] {
+function yearsWithData(benchmarkId: number): number[] {
+  return [...new Set(
+    allThresholds.value
+      .filter(t => t.benchmark_id === benchmarkId)
+      .map(t => t.effective_year)
+  )].sort((a, b) => b - a)
+}
+
+function buildEditRows(benchmarkId: number, year: number, sourceYear?: number): EditRow[] {
+  const resolvedYear = sourceYear ?? year
   return Array.from({ length: 8 }, (_, i) => {
     const size = i + 1
-    // Prefer exact year match; fall back to any row for this benchmark+size
-    const exactMatch = allThresholds.value.find(
-      t => t.benchmark_id === benchmarkId && t.household_size === size && t.effective_year === year
+    const match = allThresholds.value.find(
+      t => t.benchmark_id === benchmarkId && t.household_size === size && t.effective_year === resolvedYear
     )
-    const anyMatch = allThresholds.value.find(
-      t => t.benchmark_id === benchmarkId && t.household_size === size
-    )
-    const existing = exactMatch ?? anyMatch
     return {
       household_size: size,
-      monthly_limit: existing?.monthly_limit ?? null,
-      annual_limit: existing?.annual_limit ?? null,
+      monthly_limit: match?.monthly_limit ?? null,
+      annual_limit: match?.annual_limit ?? null,
     }
   })
 }
 
 function resetRows() {
-  if (selectedBenchmarkId.value) {
-    editRows.value = buildEditRows(selectedBenchmarkId.value, effectiveYear.value)
-    saveMessage.value = ''
-  }
+  if (!selectedBenchmarkId.value) return
+  const id = selectedBenchmarkId.value
+  const year = effectiveYear.value
+  const hasExact = allThresholds.value.some(
+    t => t.benchmark_id === id && t.effective_year === year
+  )
+  yearHasData.value = hasExact
+  // Find the most recent prior year that has data
+  const prior = yearsWithData(id).find(y => y < year) ?? null
+  priorYearWithData.value = prior
+  editRows.value = buildEditRows(id, year)
+  saveMessage.value = ''
+}
+
+function copyFromPriorYear() {
+  if (!selectedBenchmarkId.value || !priorYearWithData.value) return
+  editRows.value = buildEditRows(selectedBenchmarkId.value, effectiveYear.value, priorYearWithData.value)
+  saveMessage.value = ''
 }
 
 watch(selectedBenchmarkId, (newId) => {
@@ -278,6 +309,20 @@ onMounted(async () => {
 .threshold-title { font-size: var(--text-lg); font-weight: 700; color: var(--color-primary); }
 .threshold-year { display: flex; flex-direction: column; gap: var(--sp-1); }
 .year-select { width: 120px; }
+
+.no-data-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  background: #fffbeb;
+  border: 1px solid #f59e0b;
+  border-radius: var(--radius);
+  color: #92400e;
+  font-size: var(--text-sm);
+  margin-bottom: var(--sp-4);
+}
+.no-data-banner span { flex: 1; }
 
 .threshold-table-wrapper { overflow-x: auto; }
 .threshold-table {
