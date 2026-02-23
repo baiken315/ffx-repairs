@@ -183,7 +183,13 @@ function goBack() {
 
 function onSkip() {
   store.setAnswer(currentQuestion.value.code, null)
-  goNext()
+  // Skip bypasses canAdvance — null is a valid skipped answer
+  if (currentIdx.value >= store.activeQuestions.length - 1) {
+    showResults.value = true
+  } else {
+    store.currentQuestionIndex++
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 }
 
 function beginQuestionnaire() {
