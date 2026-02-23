@@ -109,6 +109,16 @@
       </div>
     </div>
 
+    <!-- Eligibility reasoning -->
+    <div v-if="reasons && reasons.length > 0" class="cw-section cw-reasons">
+      <h4 class="cw-section-title">Why eligible</h4>
+      <ul class="reasons-list">
+        <li v-for="(r, i) in reasons" :key="i">
+          <span class="reason-check">✓</span> {{ r }}
+        </li>
+      </ul>
+    </div>
+
     <!-- Seasonal windows -->
     <div v-if="program.seasonal_windows.length > 0" class="cw-section">
       <h4 class="cw-section-title">Application Windows</h4>
@@ -129,7 +139,7 @@
 import { computed } from 'vue'
 import type { Program } from '@/stores/eligibility'
 
-const props = defineProps<{ program: Program }>()
+const props = defineProps<{ program: Program; reasons?: string[] }>()
 
 const today = new Date()
 const isOpen = computed(() => {
@@ -197,6 +207,23 @@ function formatDate(d: string) {
 .cw-windows { padding-left: var(--sp-4); font-size: var(--text-sm); }
 .cw-windows li { margin-bottom: var(--sp-1); }
 .cw-note { color: var(--color-text-muted); font-style: italic; margin-left: var(--sp-2); }
+
+.cw-reasons {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+}
+.reasons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  font-size: var(--text-sm);
+}
+.reason-check { color: #16a34a; font-weight: 700; margin-right: var(--sp-1); }
 
 .label { font-weight: 600; }
 </style>

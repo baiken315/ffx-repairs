@@ -186,6 +186,74 @@ export const useEligibilityStore = defineStore('eligibility', () => {
     return true
   }
 
+  function matchReasons(p: Program, ans: Answers): string[] {
+    const reasons: string[] = []
+    const today = new Date()
+    const fmt = (n: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n)
+
+    if (ans.geography) {
+      const geo = p.geographies.find(g => g.code === ans.geography)
+      reasons.push(`Geography: ${geo?.label ?? ans.geography}`)
+    }
+
+    if (
+      ans.household_size !== undefined &&
+      (ans.monthly_income !== undefined || ans.annual_income !== undefined)
+    ) {
+      if (p.income_benchmark === null) {
+        reasons.push('Income: no income limit for this program')
+      } else if (p.income_thresholds.length > 0) {
+        const threshold = p.income_thresholds.find(t => t.household_size === ans.household_size)
+        const userMonthly = ans.monthly_income ?? (ans.annual_income! / 12)
+        if (threshold?.monthly_limit) {
+          reasons.push(`Income: ${fmt(userMonthly)}/mo ≤ ${fmt(threshold.monthly_limit)}/mo limit (${p.income_benchmark.label}, household of ${ans.household_size})`)
+        } else {
+          reasons.push(`Income: within ${p.income_benchmark.label} (household of ${ans.household_size})`)
+        }
+      }
+    }
+
+    if (ans.age_group) {
+      const ag = p.age_groups.find(a => a.code === ans.age_group)
+      reasons.push(`Age group: ${ag?.label ?? ans.age_group}`)
+    }
+
+    if (ans.legal_status !== undefined && ans.legal_status !== null) {
+      if (p.requires_legal_status === null || p.requires_legal_status === false) {
+        reasons.push('Legal status: open regardless of immigration status')
+      }
+    }
+
+    const selectedHousingCodes: string[] = []
+    if (ans.ownership_type) selectedHousingCodes.push(ans.ownership_type)
+    if (ans.home_type) selectedHousingCodes.push(ans.home_type)
+    if (selectedHousingCodes.length > 0) {
+      const matched = p.housing_types.filter(ht => selectedHousingCodes.includes(ht.code))
+      if (matched.length > 0) reasons.push(`Housing: ${matched.map(h => h.label).join(', ')}`)
+    }
+
+    if (ans.need_types && ans.need_types.length > 0) {
+      const matched = p.need_types.filter(nt => ans.need_types!.includes(nt.code))
+      if (matched.length > 0) reasons.push(`Need: ${matched.map(n => n.label).join(', ')}`)
+    }
+
+    if (p.seasonal_windows.length === 0) {
+      reasons.push('Availability: open year-round')
+    } else {
+      const openWindow = p.seasonal_windows.find(w => {
+        const open = new Date(w.open_date + 'T00:00:00')
+        const close = new Date(w.close_date + 'T23:59:59')
+        return today >= open && today <= close
+      })
+      if (openWindow) {
+        const closeStr = new Date(openWindow.close_date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+        reasons.push(`Availability: open now (through ${closeStr})`)
+      }
+    }
+
+    return reasons
+  }
+
   async function loadData(lang: string, view = 'resident') {
     isLoading.value = true
     loadError.value = null
@@ -221,6 +289,6 @@ export const useEligibilityStore = defineStore('eligibility', () => {
     allPrograms, questions, answers, currentQuestionIndex,
     isLoading, loadError, caseworkerMode,
     activeQuestions, filteredPrograms,
-    loadData, setAnswer, resetAnswers,
+    loadData, setAnswer, resetAnswers, matchReasons,
   }
 })

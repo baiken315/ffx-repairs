@@ -12,6 +12,24 @@ router.use(requireAdminAuth);
 
 router.use('/programs', programsAdminRouter);
 router.use('/income-thresholds', incomeRouter);
+
+router.post('/income-benchmarks', async (req, res, next) => {
+  try {
+    const { code, label_en, label_es } = req.body as { code: string; label_en: string; label_es: string };
+    if (!code || !label_en) return res.status(400).json({ error: 'code and label_en are required' });
+    const result = await query(
+      `INSERT INTO income_benchmarks (code, label_en, label_es)
+       VALUES ($1, $2, $3)
+       ON CONFLICT (code) DO NOTHING
+       RETURNING id, code, label_en, label_es`,
+      [code, label_en, label_es]
+    );
+    if (!result.length) return res.status(409).json({ error: `A benchmark with code "${code}" already exists.` });
+    res.status(201).json({ benchmark: result[0] });
+  } catch (err) {
+    next(err);
+  }
+});
 router.use('/import', importRouter);
 router.use('/translate', translateRouter);
 

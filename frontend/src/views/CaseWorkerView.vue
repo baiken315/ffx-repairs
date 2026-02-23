@@ -87,7 +87,7 @@
       </div>
 
       <div v-if="store.filteredPrograms.length > 0" class="results-list">
-        <ProgramCardCW v-for="p in store.filteredPrograms" :key="p.id" :program="p" />
+        <ProgramCardCW v-for="p in store.filteredPrograms" :key="p.id" :program="p" :reasons="store.matchReasons(p, store.answers)" />
       </div>
       <div v-else class="card" style="text-align:center;padding:var(--sp-12)">
         <h2>{{ $t('ui.no_results_title') }}</h2>

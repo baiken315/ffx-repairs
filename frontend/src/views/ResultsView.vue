@@ -41,6 +41,7 @@
           v-for="program in store.filteredPrograms"
           :key="program.id"
           :program="program"
+          v-bind="store.caseworkerMode ? { reasons: store.matchReasons(program, store.answers) } : {}"
         />
       </div>
 

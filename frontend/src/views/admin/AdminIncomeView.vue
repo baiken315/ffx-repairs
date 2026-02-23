@@ -11,21 +11,50 @@
     <div v-if="loading" class="admin-loading">Loading…</div>
 
     <template v-else>
-      <!-- Benchmark selector -->
+      <!-- Benchmark selector + new benchmark -->
       <div class="card benchmark-selector">
-        <label class="form-label" for="benchmark-select">Select Benchmark</label>
-        <select
-          id="benchmark-select"
-          v-model="selectedBenchmarkId"
-          class="form-input benchmark-select"
-        >
-          <option v-for="b in benchmarks" :key="b.id" :value="b.id">
-            {{ b.label_en }}
-          </option>
-        </select>
+        <div class="benchmark-top-row">
+          <div class="benchmark-select-group">
+            <label class="form-label" for="benchmark-select">Select Benchmark</label>
+            <select
+              id="benchmark-select"
+              v-model="selectedBenchmarkId"
+              class="form-input benchmark-select"
+            >
+              <option v-for="b in benchmarks" :key="b.id" :value="b.id">
+                {{ b.label_en }}
+              </option>
+            </select>
+          </div>
+          <button class="btn btn--outline btn--sm new-benchmark-btn" @click="showNewBenchmark = !showNewBenchmark">
+            {{ showNewBenchmark ? 'Cancel' : '+ New Benchmark' }}
+          </button>
+        </div>
+
+        <!-- New benchmark form -->
+        <div v-if="showNewBenchmark" class="new-benchmark-form">
+          <div class="new-benchmark-fields">
+            <div>
+              <label class="form-label">Name (English)</label>
+              <input v-model="newBenchmark.label_en" class="form-input" placeholder="e.g. 80% AMI (Custom)" />
+            </div>
+            <div>
+              <label class="form-label">Name (Spanish)</label>
+              <input v-model="newBenchmark.label_es" class="form-input" placeholder="e.g. 80% AMI (Personalizado)" />
+            </div>
+            <div>
+              <label class="form-label">Code <span class="form-hint-inline">(auto-generated)</span></label>
+              <input :value="newBenchmarkCode" class="form-input" readonly />
+            </div>
+          </div>
+          <p v-if="newBenchmarkError" class="save-message save-message--err">{{ newBenchmarkError }}</p>
+          <button class="btn btn--primary btn--sm" :disabled="!newBenchmark.label_en || creatingBenchmark" @click="createBenchmark">
+            {{ creatingBenchmark ? 'Creating…' : 'Create Benchmark' }}
+          </button>
+        </div>
+
         <p v-if="selectedBenchmark" class="benchmark-desc">
-          Programs using this benchmark:
-          <strong>{{ programsUsingBenchmark }}</strong>
+          Status: <strong>{{ programsUsingBenchmark }}</strong>
         </p>
       </div>
 
@@ -42,8 +71,8 @@
         </div>
 
         <p class="form-hint" style="margin-bottom: var(--sp-4)">
-          Enter 0 or leave blank for a household size that doesn't have a separate limit.
-          Monthly and annual limits should be consistent (annual ÷ 12 = monthly).
+          Type either monthly or annual — the other field calculates automatically (annual ÷ 12 = monthly).
+          Leave blank for household sizes without a separate limit.
         </p>
 
         <div v-if="!yearHasData" class="no-data-banner">
@@ -144,10 +173,22 @@ const selectedBenchmarkId = ref<number | null>(null)
 const effectiveYear = ref(new Date().getFullYear())
 const editRows = ref<EditRow[]>([])
 
+// New benchmark form state
+const showNewBenchmark = ref(false)
+const creatingBenchmark = ref(false)
+const newBenchmarkError = ref('')
+const newBenchmark = ref({ label_en: '', label_es: '' })
+const newBenchmarkCode = computed(() =>
+  newBenchmark.value.label_en
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_|_$/g, '')
+    .slice(0, 40) || 'custom'
+)
+
 const CURRENT_YEAR = new Date().getFullYear()
 const availableYears = [CURRENT_YEAR - 1, CURRENT_YEAR, CURRENT_YEAR + 1]
 
-// Pick the most recent year that has data for a given benchmark, falling back to current year
 function bestYearForBenchmark(benchmarkId: number): number {
   const years = allThresholds.value
     .filter(t => t.benchmark_id === benchmarkId)
@@ -164,7 +205,6 @@ const selectedBenchmark = computed(() =>
   benchmarks.value.find(b => b.id === selectedBenchmarkId.value) ?? null
 )
 
-// Count programs using this benchmark (placeholder — would need a separate API call)
 const programsUsingBenchmark = computed(() => {
   if (!selectedBenchmarkId.value) return '—'
   const rows = allThresholds.value.filter(t => t.benchmark_id === selectedBenchmarkId.value)
@@ -202,7 +242,6 @@ function resetRows() {
     t => t.benchmark_id === id && t.effective_year === year
   )
   yearHasData.value = hasExact
-  // Find the most recent prior year that has data
   const prior = yearsWithData(id).find(y => y < year) ?? null
   priorYearWithData.value = prior
   editRows.value = buildEditRows(id, year)
@@ -216,25 +255,55 @@ function copyFromPriorYear() {
 }
 
 watch(selectedBenchmarkId, (newId) => {
-  if (newId !== null) {
-    // Auto-select the year that has actual data when switching benchmarks
-    effectiveYear.value = bestYearForBenchmark(newId)
-  }
+  if (newId !== null) effectiveYear.value = bestYearForBenchmark(newId)
   resetRows()
 })
 
-watch(effectiveYear, () => {
-  resetRows()
-})
+watch(effectiveYear, () => { resetRows() })
 
 function onMonthlyInput(row: EditRow, val: string) {
   const n = parseFloat(val)
-  row.monthly_limit = isNaN(n) || val === '' ? null : Math.round(n * 100) / 100
+  if (isNaN(n) || val === '') {
+    row.monthly_limit = null
+    row.annual_limit = null
+  } else {
+    row.monthly_limit = Math.round(n * 100) / 100
+    row.annual_limit = Math.round(n * 12)
+  }
 }
 
 function onAnnualInput(row: EditRow, val: string) {
   const n = parseFloat(val)
-  row.annual_limit = isNaN(n) || val === '' ? null : Math.round(n * 100) / 100
+  if (isNaN(n) || val === '') {
+    row.annual_limit = null
+    row.monthly_limit = null
+  } else {
+    row.annual_limit = Math.round(n)
+    row.monthly_limit = Math.round((n / 12) * 100) / 100
+  }
+}
+
+async function createBenchmark() {
+  newBenchmarkError.value = ''
+  creatingBenchmark.value = true
+  try {
+    const res = await axios.post('/api/v1/admin/income-benchmarks', {
+      code: newBenchmarkCode.value,
+      label_en: newBenchmark.value.label_en,
+      label_es: newBenchmark.value.label_es || newBenchmark.value.label_en,
+    }, { headers: authHeader() })
+    benchmarks.value.push(res.data.benchmark)
+    selectedBenchmarkId.value = res.data.benchmark.id
+    newBenchmark.value = { label_en: '', label_es: '' }
+    showNewBenchmark.value = false
+    effectiveYear.value = CURRENT_YEAR
+    resetRows()
+  } catch (e: unknown) {
+    const msg = (e as { response?: { data?: { error?: string } } })?.response?.data?.error
+    newBenchmarkError.value = msg ?? 'Failed to create benchmark.'
+  } finally {
+    creatingBenchmark.value = false
+  }
 }
 
 async function save() {
@@ -251,9 +320,9 @@ async function save() {
     await axios.put(`/api/v1/admin/income-thresholds/${selectedBenchmarkId.value}`, payload, {
       headers: authHeader(),
     })
-    // Refresh local cache
     const res = await axios.get('/api/v1/admin/income-thresholds', { headers: authHeader() })
     allThresholds.value = res.data.thresholds
+    yearHasData.value = true
     saveOk.value = true
     saveMessage.value = 'Saved successfully.'
   } catch {
@@ -272,7 +341,6 @@ onMounted(async () => {
     if (benchmarks.value.length > 0) {
       const firstId = benchmarks.value[0].id
       selectedBenchmarkId.value = firstId
-      // Auto-select the year that actually has data, then build rows
       effectiveYear.value = bestYearForBenchmark(firstId)
       resetRows()
     }
@@ -291,11 +359,38 @@ onMounted(async () => {
 .benchmark-selector {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
   margin-bottom: var(--sp-4);
 }
+.benchmark-top-row {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+.benchmark-select-group { display: flex; flex-direction: column; gap: var(--sp-1); flex: 1; }
 .benchmark-select { max-width: 420px; }
+.new-benchmark-btn { white-space: nowrap; align-self: flex-end; }
 .benchmark-desc { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+.new-benchmark-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.new-benchmark-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  gap: var(--sp-3);
+}
+@media (max-width: 640px) {
+  .new-benchmark-fields { grid-template-columns: 1fr; }
+}
+.form-hint-inline { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 400; }
 
 .threshold-card { }
 .threshold-header {
