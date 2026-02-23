@@ -61,6 +61,7 @@ export interface ProgramResponse {
   how_to_apply: string | null;
   income_benchmark: { code: string; label: string } | null;
   income_note: string | null;
+  notes: string | null;
   requires_legal_status: boolean | null;
   geographies: Geography[];
   age_groups: AgeGroup[];

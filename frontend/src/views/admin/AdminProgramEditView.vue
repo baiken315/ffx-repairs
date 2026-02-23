@@ -92,6 +92,21 @@
               Program is active (visible to residents)
             </label>
           </div>
+
+          <div class="notes-section">
+            <p class="notes-section__title">Admin Notes <span class="notes-section__tag">Case worker view only</span></p>
+            <p class="form-hint" style="margin-bottom:var(--sp-3)">Freeform notes for edge cases, limitations, or context not captured elsewhere (e.g. "Limited service for renters only").</p>
+            <div class="field-grid-2">
+              <div class="form-group">
+                <label class="form-label">Notes (English)</label>
+                <textarea v-model="form.notes_en" class="form-input" rows="3" placeholder="Optional. Visible to case workers only."></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Notes (Spanish)</label>
+                <textarea v-model="form.notes_es" class="form-input" rows="3" placeholder="Optional."></textarea>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Tab: Eligibility -->
@@ -387,6 +402,8 @@ interface FormData {
   income_benchmark_id: number | null
   income_note_en: string
   income_note_es: string
+  notes_en: string
+  notes_es: string
   requires_legal_status: boolean | null
   is_active: boolean
   geography_ids: number[]
@@ -404,6 +421,7 @@ const form = reactive<FormData>({
   full_description_en: '', full_description_es: '',
   how_to_apply_en: '', how_to_apply_es: '',
   income_benchmark_id: null, income_note_en: '', income_note_es: '',
+  notes_en: '', notes_es: '',
   requires_legal_status: null, is_active: true,
   geography_ids: [], age_group_ids: [], housing_type_ids: [],
   need_type_ids: [], help_type_ids: [],
@@ -497,6 +515,8 @@ onMounted(async () => {
       income_benchmark_id: data.income_benchmark_id ?? null,
       income_note_en: data.income_note_en ?? '',
       income_note_es: data.income_note_es ?? '',
+      notes_en: data.notes_en ?? '',
+      notes_es: data.notes_es ?? '',
       requires_legal_status: data.requires_legal_status ?? null,
       is_active: data.is_active,
       geography_ids: data.geography_ids ?? [],
@@ -649,6 +669,33 @@ onMounted(async () => {
 .save-message { font-size: var(--text-sm); flex: 1; }
 .save-message--ok { color: var(--color-success); }
 .save-message--err { color: var(--color-error); }
+
+.notes-section {
+  margin-top: var(--sp-5);
+  padding: var(--sp-4);
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius-md);
+}
+.notes-section__title {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  margin-bottom: var(--sp-1);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.notes-section__tag {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #d97706;
+  color: white;
+  border-radius: 4px;
+  padding: 1px 6px;
+}
 
 .translate-bar {
   display: flex;

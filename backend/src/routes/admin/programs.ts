@@ -74,8 +74,9 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
         full_description_en, full_description_es,
         how_to_apply_en, how_to_apply_es,
         income_benchmark_id, income_note_en, income_note_es,
+        notes_en, notes_es,
         requires_legal_status, is_active
-      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
+      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16)
       RETURNING id
     `, [
       b.slug, b.name_en, b.name_es,
@@ -83,6 +84,7 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
       b.full_description_en ?? null, b.full_description_es ?? null,
       b.how_to_apply_en ?? null, b.how_to_apply_es ?? null,
       b.income_benchmark_id ?? null, b.income_note_en ?? null, b.income_note_es ?? null,
+      b.notes_en ?? null, b.notes_es ?? null,
       b.requires_legal_status ?? null, b.is_active ?? true,
     ]);
 
@@ -113,14 +115,16 @@ router.put('/:id', async (req: Request, res: Response, next: NextFunction) => {
         full_description_en=$6, full_description_es=$7,
         how_to_apply_en=$8, how_to_apply_es=$9,
         income_benchmark_id=$10, income_note_en=$11, income_note_es=$12,
-        requires_legal_status=$13, is_active=$14
-      WHERE id=$15
+        notes_en=$13, notes_es=$14,
+        requires_legal_status=$15, is_active=$16
+      WHERE id=$17
     `, [
       b.slug, b.name_en, b.name_es,
       b.short_description_en ?? null, b.short_description_es ?? null,
       b.full_description_en ?? null, b.full_description_es ?? null,
       b.how_to_apply_en ?? null, b.how_to_apply_es ?? null,
       b.income_benchmark_id ?? null, b.income_note_en ?? null, b.income_note_es ?? null,
+      b.notes_en ?? null, b.notes_es ?? null,
       b.requires_legal_status ?? null, b.is_active ?? true,
       id,
     ]);

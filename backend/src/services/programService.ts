@@ -26,6 +26,7 @@ export async function getAllProgramsV2(
         ${fullDescCol}            AS full_description,
         p.how_to_apply_${l}       AS how_to_apply,
         p.income_note_${l}        AS income_note,
+        p.notes_${l}              AS notes,
         p.requires_legal_status,
         p.is_active,
         p.income_benchmark_id,
@@ -178,6 +179,7 @@ export async function getAllProgramsV2(
         ? { code: p.benchmark_code, label: p.benchmark_label }
         : null,
       income_note:           p.income_note       ?? null,
+      notes:                 p.notes             ?? null,
       requires_legal_status: p.requires_legal_status,
       is_active:             p.is_active,
       geographies:   (geoMap.get(p.id)      ?? []).map(g => ({ id: 0, code: String(g.code),     label: String(g.label) })),

@@ -106,7 +106,11 @@ Then **restart the backend** for the change to take effect:
 # Stop the running backend (Ctrl+C), then:
 npm run dev --workspace=backend
 ```
+Alternative to kill backend/frontend:
 
+```bash
+lsof -ti:3001 -ti:5173 | xargs kill -9 2>/dev/null && echo "Stopped" || echo "Nothing running"
+```
 **Default dev credentials:** username `admin`, password `changeme`
 
 > ⚠ Change the password before deploying to production. The default hash is committed to the repo and is not secure.

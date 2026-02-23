@@ -109,6 +109,12 @@
       </div>
     </div>
 
+    <!-- Admin notes -->
+    <div v-if="program.notes" class="cw-section cw-admin-notes">
+      <h4 class="cw-section-title">Admin Notes</h4>
+      <p class="cw-pre">{{ program.notes }}</p>
+    </div>
+
     <!-- Eligibility reasoning -->
     <div v-if="reasons && reasons.length > 0" class="cw-section cw-reasons">
       <h4 class="cw-section-title">Why eligible</h4>
@@ -207,6 +213,14 @@ function formatDate(d: string) {
 .cw-windows { padding-left: var(--sp-4); font-size: var(--text-sm); }
 .cw-windows li { margin-bottom: var(--sp-1); }
 .cw-note { color: var(--color-text-muted); font-style: italic; margin-left: var(--sp-2); }
+
+.cw-admin-notes {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+}
+.cw-admin-notes .cw-section-title { color: #92400e; }
 
 .cw-reasons {
   background: #f0fdf4;
