@@ -108,12 +108,18 @@ export async function getAllProgramsV2(
       ),
       benchmarkIds.length > 0
         ? client.query(
-            `SELECT benchmark_id, household_size,
-                    monthly_limit::float AS monthly_limit,
-                    annual_limit::float  AS annual_limit
-             FROM income_thresholds
-             WHERE benchmark_id = ANY($1)
-             ORDER BY benchmark_id, household_size`,
+            `SELECT it.benchmark_id, it.household_size,
+                    it.monthly_limit::float AS monthly_limit,
+                    it.annual_limit::float  AS annual_limit
+             FROM income_thresholds it
+             JOIN (
+               SELECT benchmark_id, MAX(effective_year) AS max_year
+               FROM income_thresholds
+               WHERE benchmark_id = ANY($1)
+               GROUP BY benchmark_id
+             ) latest ON it.benchmark_id = latest.benchmark_id
+                     AND it.effective_year = latest.max_year
+             ORDER BY it.benchmark_id, it.household_size`,
             [benchmarkIds]
           )
         : Promise.resolve({ rows: [] as Array<{ benchmark_id: number; household_size: number; monthly_limit: number | null; annual_limit: number | null }> }),
