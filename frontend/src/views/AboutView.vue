@@ -39,7 +39,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div>
-            <h2 class="about-card__title">Use at Your Own Risk</h2>
+            <h2 class="about-card__title">Use at Your Own Discretion</h2>
             <p class="about-card__body">
               Eligibility results produced by this tool are <strong>unvalidated estimates</strong> based on the information you provide and the program data maintained by community contributors. Final eligibility determinations are made solely by the administering agencies. Use of this tool and any contact with listed organizations is done at the independent risk of the user.
             </p>
@@ -59,6 +59,19 @@
           </div>
         </section>
 
+        <!-- Privacy -->
+        <section class="about-card">
+          <div class="about-icon about-icon--green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <h2 class="about-card__title">Your Privacy</h2>
+            <p class="about-card__body">
+              We do not collect any personal data. This site uses <strong>no cookies</strong>. The only information stored on your device is your language preference (English or Spanish), saved locally in your browser. No answers you provide during the eligibility questionnaire are transmitted to or stored on our servers — the screening happens entirely in your browser.
+            </p>
+          </div>
+        </section>
+
         <!-- Contact -->
         <section class="about-card about-card--center">
           <div class="about-icon about-icon--gray">
@@ -66,7 +79,7 @@
           </div>
           <div>
             <h2 class="about-card__title">Contact</h2>
-            <p class="about-card__body">For suggestions, corrections, or questions about program data:</p>
+            <p class="about-card__body">For suggestions, corrections, questions about program data, or to get involved with this project:</p>
             <a href="mailto:ffx_services@proton.me" class="about-email">ffx_services@proton.me</a>
           </div>
         </section>
@@ -120,12 +133,13 @@
   background: white;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--sp-5);
+  padding: var(--sp-6);
   display: flex;
-  gap: var(--sp-4);
+  gap: var(--sp-5);
   align-items: flex-start;
   box-shadow: var(--shadow-sm);
 }
+.about-card > div { min-width: 0; flex: 1; }
 .about-card--center { align-items: flex-start; }
 
 .about-icon {
