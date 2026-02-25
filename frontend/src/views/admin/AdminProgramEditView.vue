@@ -364,24 +364,33 @@ const CheckboxGroup = defineComponent({
 const { translating, translateError, translateToSpanish } = useTranslate()
 
 async function autoTranslateBasic() {
-  const originals = [
-    form.name_en,
-    form.short_description_en,
-    form.full_description_en,
-    form.how_to_apply_en,
-    form.income_note_en,
-    form.notes_en,
+  const fieldsToTranslate = [
+    { key: 'name_es' as const, en: form.name_en, es: form.name_es },
+    { key: 'short_description_es' as const, en: form.short_description_en, es: form.short_description_es },
+    { key: 'full_description_es' as const, en: form.full_description_en, es: form.full_description_es },
+    { key: 'how_to_apply_es' as const, en: form.how_to_apply_en, es: form.how_to_apply_es },
+    { key: 'income_note_es' as const, en: form.income_note_en, es: form.income_note_es },
+    { key: 'notes_es' as const, en: form.notes_en, es: form.notes_es },
   ]
+
+  // Only translate fields that don't already have Spanish content
+  const toTranslate = fieldsToTranslate.filter(f => !f.es)
+  if (toTranslate.length === 0) return
+
+  const originals = toTranslate.map(f => f.en)
   const results = await translateToSpanish(originals)
-  if (results[0]) form.name_es = results[0]
-  if (results[1]) form.short_description_es = results[1]
-  if (results[2]) form.full_description_es = results[2]
-  if (results[3]) form.how_to_apply_es = results[3]
-  if (results[4]) form.income_note_es = results[4]
-  if (results[5]) form.notes_es = results[5]
+
+  toTranslate.forEach((field, idx) => {
+    if (results[idx]) {
+      (form[field.key] as string) = results[idx]
+    }
+  })
 }
 
 async function autoTranslateIncome() {
+  // Skip if Spanish field already has content
+  if (form.income_note_es) return
+
   const originals = [form.income_note_en]
   const results = await translateToSpanish(originals)
   if (results[0]) form.income_note_es = results[0]
@@ -389,6 +398,9 @@ async function autoTranslateIncome() {
 
 async function autoTranslateWindow(i: number) {
   const w = form.seasonal_windows[i]
+  // Skip if Spanish field already has content
+  if (w.notes_es) return
+
   const originals = [w.notes_en]
   const results = await translateToSpanish(originals)
   if (results[0]) w.notes_es = results[0]

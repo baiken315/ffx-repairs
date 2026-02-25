@@ -69,6 +69,12 @@ npm run dev --workspace=backend
 # Terminal 2 — frontend (port 5173, Vite HMR)
 npm run dev --workspace=frontend
 ```
+OR
+
+```bash
+npm run dev --concurrently
+```
+
 
 Open http://localhost:5173
 
