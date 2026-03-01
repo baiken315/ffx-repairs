@@ -1,0 +1,3476 @@
+{
+  "programs": [
+    {
+      "name": "AC Rescue \n(OEEC and Rebuilding Together)",
+      "administered_by": "Fairfax County Office of Environmental and Energy Coordination (OEEC) and Rebuilding Together-AFF",
+      "emergency_service": "Yes",
+      "short_description": "Small AC installations such as window and portable AC units (plentiful supply) and very limited number of central HVAC repairs and replacements for those in especially dire situations who don't qualify for other help.",
+      "funding_source": "Fairfax County OEEC  - Resilient Fairfax",
+      "how_to_apply": "Call Rebuilding Together at 703-528-1999",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": true,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": true,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "80% AMI",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": 7121,
+            "3": 8013,
+            "4": 8900,
+            "5": 9613,
+            "6": 10325,
+            "7": 11038,
+            "8": 11750
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": false,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": true,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": true,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": true,
+          "small_ac_install": true,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": true,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Colmbia Gas HeatShare",
+      "administered_by": "Columbia Gas of Virginia",
+      "emergency_service": "Yes",
+      "short_description": "Financial assistance only: \"Fund of last resort.\" Small grants (up to a max of $500) for heat accounts, especially those that are off or in threat of termination. Applicants must have made a sincere effort of payment of at least $50 in the 3 months prior, and have an outstanding balance of at least $100. HH can receive only grant per utility per year. HH must have applied for all eligible federal programs first. ",
+      "funding_source": "Virginia Utility Assistance Program",
+      "how_to_apply": "Call Columbia Gas at 1-800-543-8911",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": true,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "175% of Federal poverty income guidelines",
+          "monthly_limits_hh": {
+            "1": 2282,
+            "2": 3084,
+            "3": 3886,
+            "4": 4689,
+            "5": 5491,
+            "6": 6293,
+            "7": 7095,
+            "8": 7897
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": false
+        },
+        "housing": {
+          "renters": false,
+          "owners": false,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": true,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30"
+        ]
+      }
+    },
+    {
+      "name": "Columbia Gas of Virginia Age and Income Qualifying Program: (AGE QUALIFYING CATEGORY For 60+)",
+      "administered_by": "Columbia Gas of Virginia and CHP",
+      "emergency_service": "No",
+      "short_description": "Eligible customers will receive a visit to their home to install certain energy saving products based on whether they have natural gas water heating, space heating, or both. Qualified customers with gas heating will receive: furnace filter, air sealing, attic insulation, duct sealing, wall or floor insulation, smart thermostat, furnace cleaning or tuning. ",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": true,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "If aged 60+, income up to 120% SMI; ",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": true,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": false
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": true,
+          "efficiency_upgrades": false,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Columbia Gas of Virginia Age and Income Qualifying Program: (INCOME QUALIFYING CATEGORY)",
+      "administered_by": "Columbia Gas of Virginia and CHP",
+      "emergency_service": "No",
+      "short_description": "Eligible customers will receive a visit to their home to install certain energy saving products based on whether they have natural gas water heating, space heating, or both. Qualified customers with gas heating will receive: furnace filter, air sealing, attic insulation, duct sealing, wall or floor insulation, smart thermostat, furnace cleaning or tuning. ",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": true,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "If UNDER AGE 60,  up to 60% SMI ",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": true,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": false
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Department of Code Compliance",
+      "administered_by": "Fairfax County Department of Code Compliance (DCC)",
+      "emergency_service": "No",
+      "short_description": "Help if a landlord is refusing to repair an HVAC system",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": true,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "No income restrictions",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": false,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": true,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": true,
+        "heating": true,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": true,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": true,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Dominion EnergyShare",
+      "administered_by": "Dominion Energy & Salvation Army or United Community",
+      "emergency_service": "Yes",
+      "short_description": "Financial assistance only: Year-round energy assistance program of last resort and is available to anyone who faces financial hardship, regardless of income. $600 maximum benefit for heating, $300 max for cooling",
+      "funding_source": null,
+      "how_to_apply": "For a referral to your local EnergyShare\u00ae agency, please call 2-1-1 or visit 211virginia.org.",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": true,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": true,
+          "external_united_community": true,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "No income restrictions",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": false,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Dominion Income & Age Qualifying Residential Bundle Program: (AGE QUALIFYING  CATEGORY",
+      "administered_by": "Dominion and CHP, with approval from State Corporation Commission",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: Our Income and Age Qualifying Residential Bundle Program (IAC) provides no cost energy efficient upgrades to qualified customers.\nThe program is available to eligible customers in our Virginia service territory. If you qualify, an energy expert will examine your home, generate a custom energy assessment report, and install the selected energy-saving products. No products will be installed without the customer's permission.",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": true,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "For 60+, up to 120% of SMI. ",
+          "monthly_limits_hh": {
+            "1": 6968.166666666667,
+            "2": 9112.333333333334,
+            "3": 11256.333333333334,
+            "4": 13400.5,
+            "5": 15544.5,
+            "6": 17688.5,
+            "7": 18090.666666666668,
+            "8": 18492.666666666668
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": false,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Dominion Income & Age Qualifying Residential Bundle Program: (INCOME-QUALIFYING CATEGORY)",
+      "administered_by": "Dominion and CHP, with approval from State Corporation Commission",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: Our Income and Age Qualifying Residential Bundle Program (IAC) provides no cost energy efficient upgrades to qualified customers.\nThe program is available to eligible customers in our Virginia service territory. If you qualify, an energy expert will examine your home, generate a custom energy assessment report, and install the selected energy-saving products. No products will be installed without the customer's permission.",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": true,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "Up to 80% of AMI or 60% of SMI as determined by VDHCD, whichever is greater. ",
+          "monthly_limits_hh": {
+            "1": 3484.0833333333335,
+            "2": 4556.166666666667,
+            "3": 5628.166666666667,
+            "4": 6700.25,
+            "5": 7772.25,
+            "6": 8844.25,
+            "7": 9045.333333333334,
+            "8": 9246.333333333334
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": false,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Dominion Percentage of Income Payment Program (PIPP)",
+      "administered_by": "Fairfax County Department of Family Services (DFS), and Dominion Energy",
+      "emergency_service": "No",
+      "short_description": "Financial assistance: Changes payment structure to be 10% of income for electric heat (or 6% of income for other heat source) rather than the  bill being based on use. (Only a good option for very low income residents with a high outstanding balance)",
+      "funding_source": null,
+      "how_to_apply": "Customers of either Dominion Energy customers or Appalachian Power Company (APCo/AEP) should either:\n\nComplete an online application at CommonHelp.\nSubmit a paper application to your local department of social services.\nPIPP Application - English (PDF)\nPIPP Application - Spanish (PDF)",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": true,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": true,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "150% federal poverty",
+          "monthly_limits_hh": {
+            "1": 1882,
+            "2": 2555,
+            "3": 3227,
+            "4": 3900,
+            "5": 4572,
+            "6": 5245,
+            "7": 5917,
+            "8": 6590
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": false,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": true,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": true,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Dominion Smart Home Program (Discounted kit purchases)",
+      "administered_by": "Dominion Energy",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: Dominion Energy offers instant rebates on smart home products to help you start saving. Build your custom Smart Home Kit and purchase with a discount. ",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": true,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": false,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": false,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": true,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Energy Assistance: Cooling Assistance (Dept of Family Services)",
+      "administered_by": "Fairfax County Department of Family Services (DFS), Energy Assistance and contractors including CHP.",
+      "emergency_service": "Yes",
+      "short_description": "\u2022 Payment of electric bill to operate cooling equipment\n\u2022 Payment of security deposits for electricity to operate cooling equipment for accounts in danger of being disconnected or when deposit needed to begin service\n\u2022 Repair of central HVAC or heat pump (up to $300)\n\u2022 Purchase of whole house fan, including ceiling or attic fans but only when no other working equipment \nPurchase and installation or self pick up of AC (window or portable) but only when no other working equipment",
+      "funding_source": "Federal LiHEAP",
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": true,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": 1956,
+            "2": 2643,
+            "3": 3331,
+            "4": 4018,
+            "5": 4706,
+            "6": 5393,
+            "7": 6081,
+            "8": 6768
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": true,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15"
+        ]
+      }
+    },
+    {
+      "name": "Energy Assistance: Crisis Assistance",
+      "administered_by": "Fairfax County Department of Family Services (DFS), Energy Assistance and contractors including CHP.",
+      "emergency_service": "Yes",
+      "short_description": "Helps households overcome energy emergencies that can't be met by other resources. Energy emergency = household has no heat or is in imminent danger of no heat. \n\t\u2022 Pays primary heat source utility bills,\n\t\u2022 payment of security deposits for primary heat, \n\t\u2022 purchase primary home heating fuel supply is low, \n\t\u2022 repair of inoperable or unsafe heating equipment\n\t\u2022 Replace of heating equipment for homeowners only \nProvision of supplemental heating equipment/ maintenance",
+      "funding_source": "Federal liheap",
+      "how_to_apply": "\u2022 Online\n\u2022 Phone: Enterprise Call Center at 833-5-CALL-VA (833-522-5582).\n\u2022 In Person: Applications for Energy Assistance are available at the Fairfax County Human Services Centers (Lake Anne in Reston).\n\u2022 Paper Application\n\t\u25cb Mail: 12011 Government Center Parkway, Suite 232,Fairfax, VA 22035\n\t\u25cb Fax: 703-653-1355\n\t\u25cb Email: DFSmycase@FairfaxCounty.gov\nDrop off at one of the four DFS office locations.",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": true,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": false,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": 1956,
+            "2": 2643,
+            "3": 3331,
+            "4": 4018,
+            "5": 4706,
+            "6": 5393,
+            "7": 6081,
+            "8": 6768
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": true,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": true,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": true,
+          "hvac_replace": true,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Energy Assistance: Fuel Assistance",
+      "administered_by": "Fairfax County Department of Family Services (DFS), Energy Assistance",
+      "emergency_service": "Yes",
+      "short_description": "Financial assistance only: Helps eligible households with the costs of heating their homes",
+      "funding_source": "Federal Liheap",
+      "how_to_apply": "\u2022 Online\n\u2022 Phone: Enterprise Call Center at 833-5-CALL-VA (833-522-5582).\n\u2022 In Person: Applications for Energy Assistance are available at the Fairfax County Human Services Centers (Lake Anne in Reston).\n\u2022 Paper Application\n\t\u25cb Mail: 12011 Government Center Parkway, Suite 232,Fairfax, VA 22035\n\t\u25cb Fax: 703-653-1355\n\t\u25cb Email: DFSmycase@FairfaxCounty.gov\nDrop off at one of the four DFS office locations.",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": true,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": 1956,
+            "2": 2643,
+            "3": 3331,
+            "4": 4018,
+            "5": 4706,
+            "6": 5393,
+            "7": 6081,
+            "8": 6768
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Oct 16-31",
+          "Nov 1-15"
+        ]
+      }
+    },
+    {
+      "name": "Energy Compass (Pilot)",
+      "administered_by": "Fairfax County Office of Environmental and Energy Coordination (OEEC)  ",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: Concierge-style service to provide individual technical assistance and connection to contractors and incentives for residential energy efficiency upgrades and retrofits",
+      "funding_source": "County funds",
+      "how_to_apply": "Use website form (https://www.fairfaxcounty.gov/environment-energy-coordination/fairfax-energy-compass), email (energycompass@fairfaxcounty.gov), or phone (703-324-3721) for the program. ",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": true,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "None - designed for all residents",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": true,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Fairfax FISH",
+      "administered_by": "Fairfax FISH",
+      "emergency_service": "Yes",
+      "short_description": "Financial assistance to an individual or family once during a 12-month period. Financial aid for utilities such as electric, water, gas, or heating oil, and other needs (rent, mortgage, prescriptions, gasoline, food, baby supplies, nutritional supplements, medical/dental). ",
+      "funding_source": "Donations",
+      "how_to_apply": "\nIf you need help or assistance please contact:\nFairfax County Department of Human Services at:   \n\n703-222-0880",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": true,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": true,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": false,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": true,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": false,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Home Repair and Accessibility Modifications (HRAM) - \nNOTE: AC Rescue itself is a portion of this contract",
+      "administered_by": "Fairfax County Department of Housing and Community Development (DHCD), OEEC (AC Rescue component only) and Rebuilding Together AFF",
+      "emergency_service": "No",
+      "short_description": null,
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": true,
+          "county_ncs": false,
+          "county_oeec": true,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": true,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "Up to 80% AMI",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": 7121,
+            "3": 8013,
+            "4": 8900,
+            "5": 9613,
+            "6": 10325,
+            "7": 11038,
+            "8": 11750
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": true,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Home Repair - Manufactured",
+      "administered_by": "Fairfax County Department of Housing and Community Development (DHCD) and Good Shepherd Housing",
+      "emergency_service": "No",
+      "short_description": "Essential repairs and rehabilitation projects up to $10,000 per unit or $18,000 emergency repairs per manufactured housing unit. Small pilot of 5 homes.  If in a floodplain, limited to the $10,000 unless they provide proof of insurance. ",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": true,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": true,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "Up to 80% AMI",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": 7121,
+            "3": 8013,
+            "4": 8900,
+            "5": 9613,
+            "6": 10325,
+            "7": 11038,
+            "8": 11750
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Home Repair for the Elderly Program (HREP)",
+      "administered_by": "Fairfax County Department of Housing and Community Development (DHCD) and Rebuilding Together AFF",
+      "emergency_service": "No",
+      "short_description": "Minor home repairs and accessibility modifications for low and moderate income, elderly homeowners or disabled. Up to 1 week's worth of labor and $1,000 in materials. Light fixtures, light switches, outlets, windows, doors, faucets, toilets, showerheads, gutters, grab bars, electric hot water heaters, minor deck repairs, power washing, minor HOA repair. This program is NOT intended to meet short term emergency needs. ",
+      "funding_source": "Federal and county",
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": true,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": true,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "Monthly housing costs must exceed 25% of income, and must not exceed limits shown here",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Northern Virginia Family Services - Utilities Assistance",
+      "administered_by": "Northern Virginia Family Services (NVFS)",
+      "emergency_service": "Yes",
+      "short_description": "Financial assistance: Aid households in imminent risk of danger and/or homelessness. Provides assistance with rent, utility shut-off notices and medical expenses. Provides emergency financial support, information and referral, advocacy and seasonal projects. (Question: What is included in seasonal projects?)",
+      "funding_source": null,
+      "how_to_apply": "Clients must call their county's central intake line to be referred to NVFS. Fairfax:\n703.222.0880",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": true,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": false,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": false,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "NOVEC Payment Arrangements",
+      "administered_by": "NOVEC",
+      "emergency_service": null,
+      "short_description": "Financial assistance: Customers can make payment arrangements for past due balances. ",
+      "funding_source": null,
+      "how_to_apply": "Please contact our Customer Care Center at (703) 335-0500 and have your name, email, service address and account number ready.",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": true,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": false,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": false,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": false,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": true,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Salvation Army EMAST (Emergency Assistance)",
+      "administered_by": "Salvation Army",
+      "emergency_service": "Yes",
+      "short_description": "Financial assistance: Emergency financial assistance for rent, rental security deposit, mortgage, utility (electric, gas, sewer, water). (Usually capped at $500).",
+      "funding_source": null,
+      "how_to_apply": "https://southernusa.salvationarmy.org/nca/gethelp",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": true,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": false,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": true,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Senior Cool Care",
+      "administered_by": "Department of Family Services (DFS) Older Adults, with occasional installation help from AC Rescue (RT-AFF)",
+      "emergency_service": null,
+      "short_description": "Limited supply of fans or small AC ",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": true,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": true,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": true,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": 1956,
+            "2": 2643,
+            "3": 3331,
+            "4": 4018,
+            "5": 4706,
+            "6": 5393,
+            "7": 6081,
+            "8": 6768
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": false,
+          "manufactured": false,
+          "single_family_detached": false,
+          "townhomes_attached": false,
+          "multi_family": false,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": true,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": true,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": false,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Virginia Income Annual Retail Sales & Use Tax Holiday (Expires 7/1/2030)",
+      "administered_by": "Virginia Tax",
+      "emergency_service": "No",
+      "short_description": "Financial savings: Consumers may purchase qualifying Energy Star and WaterSense products for home use tax-free, up to $2,500 per item. The future of the holiday beyond 2025 is subject to state-level extension or repeal and not directly impacted by federal changes. ",
+      "funding_source": null,
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": false,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": false,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": null,
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": false,
+          "city_fairfax": false,
+          "falls_church": false,
+          "herndon": false,
+          "vienna": false
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": false,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": false
+      },
+      "help_categories": {
+        "financial": true,
+        "hvac_equipment": false,
+        "efficiency_weatherization": false
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": true,
+          "efficiency_savings": false
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": false,
+          "efficiency_upgrades": true,
+          "energy_advice": false
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": []
+      }
+    },
+    {
+      "name": "Washington Gas & Light Low-Income Energy Audit and Weatherization Program (LIEAWP)",
+      "administered_by": "Washington Gas & CHP",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: The Low-Income Energy Audit and Weatherization Program is designed to reduce heating and water heating costs for income-qualifying families in Washington Gas\u2019 Virginia service territory by improving the energy efficiency of their homes. Typical measures installed may include but are not limited to the following: Water heater tank insulation, water pipe insulation, low-flow showerheads and attic insulation.",
+      "funding_source": null,
+      "how_to_apply": "Washington Gas works with Community Housing Partners (CHP) Energy Solutions, a nonprofit organization based in Virginia, to deliver this program to customers. To see if you qualify, call 1-888-229-3714 Option 1 or email our program administrator, CHP energy Solutions at  utility@chpc2.org. ",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": true
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": false,
+          "disabled_federal": false,
+          "veterans": false
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "Up to 80% AMI, or multifamily properties with at least 66% of residents earning up to 80% AMI. ",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": false,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": false,
+          "multi_family": true,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": false,
+          "hvac_repairs": false,
+          "hvac_replace": false,
+          "electrical_repairs": false,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Washington Gas Income-Qualifying Energy Efficiency Program (IQEEP): (AGE QUALIFYING CATEGORY, FOR 60+)",
+      "administered_by": "Washington Gas & CHP",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: The Washington Gas Income Qualifying Energy Efficiency Program provides no-cost products and professional installation services for homeowners or renters living at multifamily properties or in single-family homes with gas space and/or water heating equipment. Products and services may include: energy efficiency and health and safety home audit, water heater tank insulation, water pipe insulation, low-flow showerhead, faucet aerators, air sealing, duct sealing, attic insulation, furnace clean and tune, CO detector, EE recommendations and educational materials, smart thermostats",
+      "funding_source": null,
+      "how_to_apply": "Washington Gas Income Qualifying Energy Efficiency Program",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": true
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": false,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "For residents 60+, income at or below 120% of state median income",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": false,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": true,
+          "electrical_repairs": true,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Washington Gas Income-Qualifying Energy Efficiency Program (IQEEP): (INCOME QUALIFYING CATEGORY)",
+      "administered_by": "Washington Gas & CHP",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: The Washington Gas Income Qualifying Energy Efficiency Program provides no-cost products and professional installation services for homeowners or renters living at multifamily properties or in single-family homes with gas space and/or water heating equipment. Products and services may include: energy efficiency and health and safety home audit, water heater tank insulation, water pipe insulation, low-flow showerhead, faucet aerators, air sealing, duct sealing, attic insulation, furnace clean and tune, CO detector, EE recommendations and educational materials, smart thermostats",
+      "funding_source": null,
+      "how_to_apply": "Washington Gas Income Qualifying Energy Efficiency Program",
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": false,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": true
+        },
+        "age_disability": {
+          "ages_0_5": true,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": true
+        },
+        "income": {
+          "benchmark": "For residents not 60+, income up to 80% NOVA Area Median Income",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": false,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": true,
+          "owners": true,
+          "manufactured": true,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": true
+        }
+      },
+      "help_type": {
+        "cooling": false,
+        "heating": false,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": false,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": false,
+          "hvac_replace": true,
+          "electrical_repairs": true,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    },
+    {
+      "name": "Weatherization Assistance Program (WAP)",
+      "administered_by": "Virginia Dept of Housing and Community Development; CHP is the contractor for our area (\"Energy Solutions\")",
+      "emergency_service": "No",
+      "short_description": "Energy efficiency: WAP helps low-income renters and homeowners reduce their energy bills and maintain energy-efficient, safe, and healthy homes. Through WAP, eligible families receive energy audits performed by local contractors who install audit-recommended energy efficiency measures. Typical weatherization measures may include insulation, duct sealing, heating and cooling system repairs or replacement, air infiltration mitigation, and installing ENERGY STAR lighting and appliances. ",
+      "funding_source": "Federally funded Weatherization Assistance Program (WAP)",
+      "how_to_apply": null,
+      "eligibility": {
+        "administrators": {
+          "county_dcc": false,
+          "county_dfs": true,
+          "county_dhcd": false,
+          "county_ncs": false,
+          "county_oeec": false,
+          "external_chp": true,
+          "external_columbia_gas": false,
+          "external_dominion": false,
+          "external_fairfax_fish": false,
+          "external_good_shepherd": false,
+          "external_novec": false,
+          "external_rebuilding_together": false,
+          "external_salvation_army": false,
+          "external_united_community": false,
+          "external_washington_gas": false
+        },
+        "age_disability": {
+          "ages_0_5": false,
+          "ages_6_59": true,
+          "ages_60_plus": true,
+          "disabled_federal": true,
+          "veterans": true
+        },
+        "legal_status": {
+          "with_legal_status": true,
+          "without_legal_status": false
+        },
+        "income": {
+          "benchmark": "Up to 60% of State Median Income (SMI)",
+          "monthly_limits_hh": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          }
+        },
+        "geography": {
+          "fairfax_county": true,
+          "city_fairfax": true,
+          "falls_church": true,
+          "herndon": true,
+          "vienna": true
+        },
+        "utilities": {
+          "columbia_gas": true,
+          "dominion": true,
+          "novec": true,
+          "washington_gas": true
+        },
+        "housing": {
+          "renters": false,
+          "owners": true,
+          "manufactured": false,
+          "single_family_detached": true,
+          "townhomes_attached": true,
+          "multi_family": true,
+          "condos": false
+        }
+      },
+      "help_type": {
+        "cooling": true,
+        "heating": true,
+        "other": true
+      },
+      "help_categories": {
+        "financial": false,
+        "hvac_equipment": true,
+        "efficiency_weatherization": true
+      },
+      "specific_help": {
+        "financial": {
+          "direct_bill_help": false,
+          "payment_structure": false,
+          "security_deposit": false,
+          "tax_incentive_rebate": false,
+          "efficiency_savings": true
+        },
+        "hvac": {
+          "small_ac_dropoff": false,
+          "small_ac_install": false,
+          "hvac_tuning": true,
+          "hvac_repairs": true,
+          "hvac_replace": true,
+          "electrical_repairs": true,
+          "energy_audit": true,
+          "efficiency_upgrades": true,
+          "energy_advice": true
+        }
+      },
+      "availability": {
+        "year_round": false,
+        "seasonal_months": [
+          "Jan 1-15",
+          "Jan 16-31",
+          "Feb 1-15",
+          "Feb 16-29",
+          "Mar 1-15",
+          "Mar 16-31",
+          "Apr 1-15",
+          "Apr 16-30",
+          "May 1-14",
+          "May 15-31",
+          "Jun 1-14",
+          "Jun 15-30",
+          "Jul 1-15",
+          "Jul 16-31",
+          "Aug 1-15",
+          "Aug 16-31",
+          "Sep 1-15",
+          "Sep 16-30",
+          "Oct 1-15",
+          "Oct 16-31",
+          "Nov 1-15",
+          "Nov 16-30",
+          "Dec 1-15",
+          "Dec 16-31"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "total_programs": 27,
+    "source": "All_Energy_Services.xlsx",
+    "legend": {
+      "Y": "Yes",
+      "N": "No",
+      "A": "All ages/abilities",
+      "L": "Limited"
+    }
+  }
+}
