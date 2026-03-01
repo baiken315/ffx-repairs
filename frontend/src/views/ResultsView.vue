@@ -65,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useEligibilityStore } from '@/stores/eligibility'
@@ -77,6 +77,12 @@ const router = useRouter()
 const { locale } = useI18n()
 
 function print() { window.print() }
+
+// Watch for language changes and reload programs
+watch(() => locale.value, async () => {
+  const view = store.caseworkerMode ? 'caseworker' : 'resident'
+  await store.loadData(locale.value, view)
+})
 
 onMounted(async () => {
   if (store.allPrograms.length === 0) {

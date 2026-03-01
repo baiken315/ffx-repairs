@@ -69,6 +69,8 @@ export const useEligibilityStore = defineStore('eligibility', () => {
   const isLoading = ref(false)
   const loadError = ref<string | null>(null)
   const caseworkerMode = ref(false)
+  const currentLang = ref<string>('en')
+  const currentView = ref<string>('resident')
 
   const activeQuestions = computed(() => {
     // Start with full question list
@@ -256,6 +258,13 @@ export const useEligibilityStore = defineStore('eligibility', () => {
   }
 
   async function loadData(lang: string, view = 'resident') {
+    // If language changed, reload even if we already have programs
+    const langChanged = currentLang.value !== lang
+    const viewChanged = currentView.value !== view
+
+    // If nothing changed, don't reload
+    if (!langChanged && !viewChanged && allPrograms.value.length > 0) return
+
     isLoading.value = true
     loadError.value = null
     try {
@@ -270,6 +279,8 @@ export const useEligibilityStore = defineStore('eligibility', () => {
       ])
       allPrograms.value = programsRes.data
       questions.value = questionsRes.data.questions
+      currentLang.value = lang
+      currentView.value = view
     } catch {
       loadError.value = 'load_failed'
     } finally {
@@ -288,7 +299,7 @@ export const useEligibilityStore = defineStore('eligibility', () => {
 
   return {
     allPrograms, questions, answers, currentQuestionIndex,
-    isLoading, loadError, caseworkerMode,
+    isLoading, loadError, caseworkerMode, currentLang, currentView,
     activeQuestions, filteredPrograms,
     loadData, setAnswer, resetAnswers, matchReasons,
   }

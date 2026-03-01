@@ -2,13 +2,22 @@
   <div class="all-services">
     <div class="container">
       <div class="all-services__header">
-        <h1 class="all-services__title">All Assistance Programs</h1>
-        <p class="all-services__subtitle">
-          {{ filteredPrograms.length }} program{{ filteredPrograms.length !== 1 ? 's' : '' }} available
-          — <RouterLink to="/questionnaire" class="all-services__check-link">
-            Check your eligibility →
-          </RouterLink>
-        </p>
+        <div>
+          <h1 class="all-services__title">All Assistance Programs</h1>
+          <p class="all-services__subtitle">
+            {{ filteredPrograms.length }} program{{ filteredPrograms.length !== 1 ? 's' : '' }} available
+            — <RouterLink to="/questionnaire" class="all-services__check-link">
+              Check your eligibility →
+            </RouterLink>
+          </p>
+        </div>
+        <button
+          class="view-toggle-btn"
+          :class="{ 'is-expanded': viewMode === 'caseworker' }"
+          @click="toggleViewMode"
+        >
+          {{ viewMode === 'caseworker' ? '📋 Summary View' : '👤 Detailed View' }}
+        </button>
       </div>
 
       <!-- Filter bar -->
@@ -43,7 +52,7 @@
       </div>
 
       <!-- Loading -->
-      <div v-if="loading" class="all-services__loading" aria-live="polite">
+      <div v-if="store.isLoading" class="all-services__loading" aria-live="polite">
         Loading programs…
       </div>
 
@@ -58,6 +67,7 @@
           v-for="program in filteredPrograms"
           :key="program.id"
           :program="program"
+          :is-expanded="viewMode === 'caseworker'"
         />
       </div>
     </div>
@@ -65,23 +75,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import axios from 'axios'
+import { useEligibilityStore } from '@/stores/eligibility'
 import type { Program } from '@/stores/eligibility'
 import ProgramCard from '@/components/results/ProgramCard.vue'
 
 const { locale } = useI18n()
-const loading = ref(true)
-const allPrograms = ref<Program[]>([])
+const store = useEligibilityStore()
 const searchQuery = ref('')
 const activeNeedFilter = ref<string | null>(null)
 const openOnly = ref(false)
+const viewMode = ref<'summary' | 'caseworker'>('summary')
 const today = new Date()
+
+// Watch for language changes and reload programs
+watch(() => locale.value, () => {
+  loadPrograms()
+})
 
 const needTypes = computed(() => {
   const seen = new Map<string, string>()
-  for (const p of allPrograms.value) {
+  for (const p of store.allPrograms) {
     for (const nt of p.need_types) {
       seen.set(nt.code, nt.label)
     }
@@ -90,30 +105,33 @@ const needTypes = computed(() => {
 })
 
 const filteredPrograms = computed(() => {
-  let list = allPrograms.value
+  let list = [...store.allPrograms]
 
   if (searchQuery.value.trim()) {
     const q = searchQuery.value.toLowerCase()
-    list = list.filter(p =>
+    list = list.filter((p: Program) =>
       p.name.toLowerCase().includes(q) ||
       (p.short_description ?? '').toLowerCase().includes(q)
     )
   }
 
   if (activeNeedFilter.value) {
-    list = list.filter(p => p.need_types.some(nt => nt.code === activeNeedFilter.value))
+    list = list.filter((p: Program) => p.need_types.some((nt) => nt.code === activeNeedFilter.value))
   }
 
   if (openOnly.value) {
-    list = list.filter(p => {
+    list = list.filter((p: Program) => {
       if (p.seasonal_windows.length === 0) return true
-      return p.seasonal_windows.some(w => {
+      return p.seasonal_windows.some((w) => {
         const open = new Date(w.open_date + 'T00:00:00')
         const close = new Date(w.close_date + 'T23:59:59')
         return today >= open && today <= close
       })
     })
   }
+
+  // Sort by program name (consistent across languages)
+  list.sort((a: Program, b: Program) => a.name.localeCompare(b.name))
 
   return list
 })
@@ -128,16 +146,17 @@ function clearFilters() {
   openOnly.value = false
 }
 
-onMounted(async () => {
-  try {
-    const res = await axios.get('/api/v1/programs', {
-      headers: { 'Accept-Language': locale.value },
-    })
-    allPrograms.value = res.data
-  } finally {
-    loading.value = false
-  }
-})
+function toggleViewMode() {
+  viewMode.value = viewMode.value === 'summary' ? 'caseworker' : 'summary'
+  loadPrograms()
+}
+
+async function loadPrograms() {
+  const view = viewMode.value === 'caseworker' ? 'caseworker' : 'resident'
+  await store.loadData(locale.value, view)
+}
+
+onMounted(loadPrograms)
 </script>
 
 <style scoped>
@@ -145,6 +164,11 @@ onMounted(async () => {
 
 .all-services__header {
   margin-bottom: var(--sp-6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
 }
 .all-services__title {
   font-size: var(--text-2xl);
@@ -155,6 +179,29 @@ onMounted(async () => {
 .all-services__subtitle {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
+}
+
+.view-toggle-btn {
+  padding: var(--sp-2) var(--sp-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: white;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  height: fit-content;
+}
+.view-toggle-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.view-toggle-btn.is-expanded {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
 }
 .all-services__check-link {
   color: var(--color-accent);

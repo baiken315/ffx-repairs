@@ -101,7 +101,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useEligibilityStore } from '@/stores/eligibility'
 import type { IncomeAnswer } from '@/components/questionnaire/QuestionIncome.vue'
@@ -115,6 +115,11 @@ import ProgramCardCW from '@/components/results/ProgramCardCW.vue'
 
 const store = useEligibilityStore()
 const { locale } = useI18n()
+
+// Watch for language changes and reload programs
+watch(() => locale.value, async () => {
+  await store.loadData(locale.value, 'caseworker')
+})
 
 const hasAnswers = computed(() => Object.keys(store.answers).length > 0)
 const showResults = ref(false)

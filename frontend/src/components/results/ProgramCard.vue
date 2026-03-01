@@ -25,10 +25,32 @@
       </div>
     </div>
 
-    <!-- Short description -->
-    <p v-if="program.short_description" class="program-card__desc">
+    <!-- Descriptions (full in expanded, short in summary) -->
+    <p v-if="program.full_description && isExpanded" class="program-card__desc program-card__desc--full">
+      {{ program.full_description }}
+    </p>
+    <p v-else-if="program.short_description" class="program-card__desc">
       {{ program.short_description }}
     </p>
+
+    <!-- Expanded section: eligibility details -->
+    <template v-if="isExpanded">
+      <div v-if="program.geographies.length > 0 || program.housing_types.length > 0 || program.age_groups.length > 0" class="program-card__section">
+        <h4 class="program-card__section-title">Eligibility</h4>
+        <div v-if="program.geographies.length > 0" class="program-card__detail">
+          <span class="detail-label">Geographies:</span>
+          {{ program.geographies.map(g => g.label).join(', ') }}
+        </div>
+        <div v-if="program.housing_types.length > 0" class="program-card__detail">
+          <span class="detail-label">Housing types:</span>
+          {{ program.housing_types.map(h => h.label).join(', ') }}
+        </div>
+        <div v-if="program.age_groups.length > 0" class="program-card__detail">
+          <span class="detail-label">Age groups:</span>
+          {{ program.age_groups.map(a => a.label).join(', ') }}
+        </div>
+      </div>
+    </template>
 
     <!-- Primary administrator -->
     <div v-if="primaryAdmin" class="program-card__contact">
@@ -59,6 +81,17 @@
       </summary>
       <p class="program-card__apply-body">{{ program.how_to_apply }}</p>
     </details>
+
+    <!-- Expanded section: seasonal windows -->
+    <div v-if="isExpanded && program.seasonal_windows.length > 0" class="program-card__section">
+      <h4 class="program-card__section-title">Application Windows</h4>
+      <ul class="program-card__windows">
+        <li v-for="(w, i) in program.seasonal_windows" :key="i">
+          {{ formatDate(w.open_date) }} – {{ formatDate(w.close_date) }}
+          <span v-if="w.notes" class="program-card__window-note">{{ w.notes }}</span>
+        </li>
+      </ul>
+    </div>
   </article>
 </template>
 
@@ -66,7 +99,7 @@
 import { computed } from 'vue'
 import type { Program } from '@/stores/eligibility'
 
-const props = defineProps<{ program: Program }>()
+const props = defineProps<{ program: Program; isExpanded?: boolean }>()
 
 const today = new Date()
 const isOpen = computed(() => {
@@ -81,6 +114,10 @@ const isOpen = computed(() => {
 const primaryAdmin = computed(() =>
   props.program.administrators.find(a => a.is_primary) ?? props.program.administrators[0] ?? null
 )
+
+function formatDate(d: string) {
+  return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+}
 </script>
 
 <style scoped>
@@ -122,6 +159,10 @@ const primaryAdmin = computed(() =>
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   margin-bottom: var(--sp-3);
+  line-height: 1.6;
+}
+.program-card__desc--full {
+  color: var(--color-text);
 }
 
 .program-card__contact {
@@ -174,5 +215,53 @@ const primaryAdmin = computed(() =>
   color: var(--color-text-muted);
   line-height: 1.7;
   white-space: pre-line;
+}
+
+.program-card__section {
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+}
+
+.program-card__section-title {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--sp-2);
+  font-weight: 700;
+}
+
+.program-card__detail {
+  font-size: var(--text-sm);
+  margin-bottom: var(--sp-2);
+  color: var(--color-text);
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-right: var(--sp-1);
+}
+
+.program-card__windows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  font-size: var(--text-sm);
+}
+
+.program-card__windows li {
+  margin: 0;
+}
+
+.program-card__window-note {
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-left: var(--sp-2);
 }
 </style>

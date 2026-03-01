@@ -35,7 +35,7 @@ export async function getAllProgramsV2(
       FROM programs p
       LEFT JOIN income_benchmarks ib ON ib.id = p.income_benchmark_id
       WHERE p.is_active = TRUE
-      ORDER BY p.name_${l}
+      ORDER BY p.id
     `);
 
     if (programsRes.rows.length === 0) return [];
