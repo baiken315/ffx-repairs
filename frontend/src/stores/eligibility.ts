@@ -58,7 +58,7 @@ export interface Answers {
   legal_status?: string | null  // null = skipped
   ownership_type?: string       // renter | owner
   home_type?: string            // manufactured | single_family | townhome | multi_family | condo
-  need_types?: string[]
+  need_type?: string[]
 }
 
 export const useEligibilityStore = defineStore('eligibility', () => {
@@ -172,8 +172,8 @@ export const useEligibilityStore = defineStore('eligibility', () => {
     }
 
     // Need type (multi)
-    if (ans.need_types && ans.need_types.length > 0) {
-      if (!p.need_types.some(nt => ans.need_types!.includes(nt.code))) return false
+    if (ans.need_type && ans.need_type.length > 0) {
+      if (!p.need_types.some(nt => ans.need_type!.includes(nt.code))) return false
     }
 
     // Seasonal
@@ -235,8 +235,8 @@ export const useEligibilityStore = defineStore('eligibility', () => {
       if (matched.length > 0) reasons.push(`Housing: ${matched.map(h => h.label).join(', ')}`)
     }
 
-    if (ans.need_types && ans.need_types.length > 0) {
-      const matched = p.need_types.filter(nt => ans.need_types!.includes(nt.code))
+    if (ans.need_type && ans.need_type.length > 0) {
+      const matched = p.need_types.filter(nt => ans.need_type!.includes(nt.code))
       if (matched.length > 0) reasons.push(`Need: ${matched.map(n => n.label).join(', ')}`)
     }
 
